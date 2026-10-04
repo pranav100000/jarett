@@ -1,3 +1,5 @@
+import { BulletList } from "@/components/bullet-list";
+import { DateRange } from "@/components/date-range";
 import { profile } from "@/content/profile";
 
 export function Experience() {
@@ -8,21 +10,12 @@ export function Experience() {
           <article>
             <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
               <h3 className="font-medium">{job.role}</h3>
-              <p className="text-sm tabular-nums text-subtle">
-                {job.start} — {job.end}
-              </p>
+              <DateRange start={job.start} end={job.end} />
             </div>
             <p className="mt-1 text-sm text-muted">
               {job.organization} · {job.location}
             </p>
-            <ul className="mt-4 space-y-2 text-[15px] leading-relaxed text-muted">
-              {job.summary.map((point) => (
-                <li key={point} className="flex gap-3">
-                  <span aria-hidden className="mt-[0.7em] h-px w-3 shrink-0 bg-line" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
+            <BulletList items={job.summary} className="mt-4" />
           </article>
         </li>
       ))}

@@ -1,3 +1,5 @@
+import { BulletList } from "@/components/bullet-list";
+import { DateRange } from "@/components/date-range";
 import { profile } from "@/content/profile";
 
 export function Education() {
@@ -16,9 +18,7 @@ export function Education() {
               >
                 {entry.degree}, {entry.field}
               </h3>
-              <p className="text-sm tabular-nums text-subtle">
-                {entry.start} — {entry.end}
-              </p>
+              <DateRange start={entry.start} end={entry.end} />
             </div>
             <p
               className={`mt-1 text-muted ${entry.featured ? "text-base" : "text-sm"}`}
@@ -32,14 +32,7 @@ export function Education() {
               </p>
             ) : null}
             {entry.highlights?.length ? (
-              <ul className="mt-4 space-y-2 text-[15px] leading-relaxed text-muted">
-                {entry.highlights.map((point) => (
-                  <li key={point} className="flex gap-3">
-                    <span aria-hidden className="mt-[0.7em] h-px w-3 shrink-0 bg-line" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+              <BulletList items={entry.highlights} className="mt-4" />
             ) : null}
           </article>
         </li>

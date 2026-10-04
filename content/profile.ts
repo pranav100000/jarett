@@ -19,7 +19,8 @@ export type Experience = {
   organization: string;
   location: string;
   start: string;
-  end: string;
+  /** Omit for a single period such as "Summer 2020". */
+  end?: string;
   summary: string[];
 };
 
@@ -30,7 +31,7 @@ export type Education = {
   school?: string;
   location: string;
   start: string;
-  end: string;
+  end?: string;
   description?: string;
   highlights?: string[];
   /** The featured entry is rendered with more detail. */
@@ -111,8 +112,7 @@ export const profile = {
       role: "Epidemiology Intern",
       organization: "County Department of Public Health",
       location: "Portland, OR",
-      start: "Summer",
-      end: "2020",
+      start: "Summer 2020",
       summary: [
         "Supported outbreak investigations and routine communicable disease surveillance, cleaning and summarizing case data for weekly situation reports.",
       ],

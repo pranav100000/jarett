@@ -7,7 +7,7 @@ export function TextLink({ className = "", ...props }: ComponentProps<"a">) {
     <a
       {...props}
       {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-      className={`underline decoration-line underline-offset-4 transition-colors hover:decoration-foreground ${className}`}
+      className={`underline decoration-subtle underline-offset-4 transition-colors hover:decoration-foreground ${className}`}
     />
   );
 }

@@ -10,7 +10,7 @@ const navigation = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-10 border-b border-line bg-background/85 backdrop-blur">
-      <div className="mx-auto flex max-w-2xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
         <a href="#top" className="font-serif text-[17px] tracking-tight">
           {profile.name}
         </a>

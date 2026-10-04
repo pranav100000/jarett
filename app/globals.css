@@ -4,7 +4,7 @@
   --background: #fcfcfb;
   --foreground: #18181b;
   --muted: #5c5c61;
-  --subtle: #949499;
+  --subtle: #74747a;
   --line: #e6e6e3;
   --accent: #2f6b55;
 }
@@ -14,7 +14,7 @@
     --background: #121212;
     --foreground: #ececea;
     --muted: #a6a6a1;
-    --subtle: #70706c;
+    --subtle: #85857f;
     --line: #272726;
     --accent: #86c3a8;
   }

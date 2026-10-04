@@ -24,7 +24,7 @@ const jsonLd = {
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-2xl px-6">
+    <div className="mx-auto max-w-3xl px-6">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
