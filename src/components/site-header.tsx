@@ -19,9 +19,9 @@ export function SiteHeader() {
       </a>
       <nav
         aria-label="Primary"
-        className="flex items-center justify-between py-8 text-sm"
+        className="flex flex-col gap-4 py-8 text-sm sm:flex-row sm:items-center sm:justify-between"
       >
-        <Link href="/" className="font-medium text-ink">
+        <Link href="/" className="font-medium whitespace-nowrap text-ink">
           {profile.name}
         </Link>
         <ul className="flex gap-5 sm:gap-7">
